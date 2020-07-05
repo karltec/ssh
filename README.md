@@ -21,7 +21,7 @@ SCRIPT SSHPLUS MANAGER é um script com um conjunto de recursos e recomendaçõe
 
 ## Instalação
 
-apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Plus; chmod 777 Plus; ./Plus
+apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/karltec/ssh/master/Plus?token=ANNJ2UEYYWSU6ZS3PNZPYES7AFIAQ; chmod 777 Plus; ./Plus
 
 -------------------------------------------------------------------------------
 
@@ -31,7 +31,7 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/AA
 
 ## Instalação
 
-wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Install/tcptweaker.sh; chmod +x tcptweaker.sh; ./tcptweaker.sh
+wget https://raw.githubusercontent.com/karltec/ssh/master/Install/tcptweaker.sh?token=ANNJ2UEJET2V77HJZFQMA227AFICY; chmod +x tcptweaker.sh; ./tcptweaker.sh
 
 -------------------------------------------------------------------------------
 # Capturador de IP
@@ -40,7 +40,7 @@ wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FR
 
 ## Instalação
 
-wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Install/IP; chmod +x IP; ./IP
+wget https://raw.githubusercontent.com/karltec/ssh/master/Install/IP?token=ANNJ2UBKJ6BADT5NPLCHRBK7AFIEU; chmod +x IP; ./IP
 
 -------------------------------------------------------------------------------
 # Pinel SSHPLUS (Web)
@@ -57,7 +57,7 @@ O PAINEL SSHPLUS v10 v11 v15 é para uma administração e
 
 ## Instalação
 
-wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Install/Panel_Web/Panelweb.sh; chmod +x Panelweb.sh; ./Panelweb.sh
+wget https://raw.githubusercontent.com/karltec/ssh/master/Install/Panel_Web/Panelweb.sh?token=ANNJ2UBSQQVZWKD7XG2JKEC7AFIHA; chmod +x Panelweb.sh; ./Panelweb.sh
 
 -------------------------------------------------------------------------------
 
