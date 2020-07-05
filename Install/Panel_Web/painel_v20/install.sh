@@ -4,7 +4,7 @@ ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 IP=$(wget -qO- ipv4.icanhazip.com)
 clear
-echo -e "\E[44;1;37m           PAINEL SSHBR V20           \E[0m"
+echo -e "\E[44;1;37m           PAINEL SSH BR V20           \E[0m"
 echo ""
 echo -e "                \033[1;31mATENCAO"
 echo ""
@@ -66,7 +66,7 @@ if [ "$(php -m |grep ssh2)" = "ssh2" ]; then
 else
   clear
   echo -e "\033[1;31m ERRO CRITICO\033[0m"
-  rm $HOME/pv20.sh
+  rm $HOME/install.sh
   exit
 fi
 apt-get install php5-curl > /dev/null 2>&1
@@ -86,10 +86,10 @@ echo -e "\033[1;33m AGUARDE..."
 echo ""
 cd /var/www
 rm -f -R *
-wget eduardoekleber.tk/pv20.zip > /dev/null 2>&1
+wget https://github.com/karltec/ssh/blob/master/Install/Panel_Web/painel_v20/painel_v20.zip > /dev/null 2>&1
 sleep 1
-unzip pv20.zip > /dev/null 2>&1
-rm -rf pv20.zip index.html > /dev/null 2>&1
+unzip painel_v20.zip > /dev/null 2>&1
+rm -rf painel_v20.zip index.html > /dev/null 2>&1
 service apache2 restart
 sleep 1
 if [[ -e "/var/www/pages/system/pass.php" ]]; then
@@ -97,7 +97,7 @@ sed -i "s;roote19;$senha;g" /var/www/pages/system/pass.php > /dev/null 2>&1
 fi
 sleep 1
 cd
-wget http://eduardoekleber.tk/pv20.sql > /dev/null 2>&1
+wget https://raw.githubusercontent.com/karltec/ssh/master/Install/Panel_Web/painel_v20/pv20.sql?token=ANNJ2UHPMYQIUEM43D5CJWC7AFQHM > /dev/null 2>&1
 sleep 1
 if [[ -e "$HOME/pv20.sql" ]]; then
     mysql -h localhost -u root -p$senha --default_character_set utf8 sshplus < pv20.sql
@@ -106,7 +106,7 @@ else
     clear
     echo -e "\033[1;31m ERRO AO IMPORTAR BANCO DE DADOS\033[0m"
     sleep 2
-    rm /root/pv20.sh > /dev/null 2>&1
+    rm /root/install.sh > /dev/null 2>&1
     exit
 fi
 echo '*,10 * * * * root /usr/bin/php /var/www/pages/system/cron.php' >> /etc/crontab
@@ -121,8 +121,8 @@ chmod 777 /var/www/admin/pages/servidor/ovpn
 chmod 777 /var/www/admin/pages/download
 chmod 777 /var/www/admin/pages/faturas/comprovantes
 cd /bin
-wget eduardoekleber.tk/usersteste.sh > /dev/null 2>&1
-wget eduardoekleber.tk/autobackup.sh > /dev/null 2>&1
+wget https://github.com/karltec/ssh/blob/master/Install/Panel_Web/painel_v20/usersteste.sh > /dev/null 2>&1
+wget https://github.com/karltec/ssh/blob/master/Install/Panel_Web/painel_v20/autobackup.sh > /dev/null 2>&1
 chmod 777 usersteste.sh
 chmod 777 autobackup.sh
 cd
@@ -137,4 +137,4 @@ echo -e "\033[1;36m SENHA\033[1;37m admin\033[0m"
 echo ""
 echo -e "\033[1;33m Altere a senha quando logar no painel\033[0m"
 cat /dev/null > ~/.bash_history && history -c
-rm /root/pv20.sh > /dev/null 2>&1
+rm /root/install.sh > /dev/null 2>&1
