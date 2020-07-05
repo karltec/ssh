@@ -1,62 +1,64 @@
 #!/bin/bash
 clear
 IP=$(wget -qO- ipv4.icanhazip.com)
-echo "America/Mexico_City" > /etc/timezone
-ln -fs /usr/share/zoneinfo/America/Mexico_City /etc/localtime > /dev/null 2>&1
+echo "America/Sao_Paulo" > /etc/timezone
+ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 clear
-echo -e "\E[44;1;37m           PANEL SSHPLUS v11          \E[0m"
+echo -e "\E[44;1;37m           PAINEL SSHPLUS WEB v11          \E[0m"
 echo ""
 echo ""
-echo -e "                \033[1;31mATENCION"
+echo -e "                \033[1;31mATENÇÃO"
 echo ""
-echo -e "\033[1;32mINTRODUZCA LA MISMA PASS CADA QUE SE LE SOLICITE"
-echo -e "\033[1;32mSIEMPRE CONFIRME LAS PREGUNTAS CON \033[1;37m Y"
+echo -e "\033[1;32mREPITA SEMPRE A MESMA SENHA"
+echo -e "\033[1;32mSEMPRE CONFIRMA PERGUNTAS COM \033[1;37m Y"
 echo ""
-echo -e "\033[1;36mINICIANDO INSTALACION"
+echo -e "\033[1;36mINICIAR INSTALAÇÃO"
 echo ""
-echo -e "\033[1;33mESPERE..."
+echo -e "\033[1;33mCARREGANDO..."
 apt-get update > /dev/null 2>&1
 echo ""
 echo -e "\033[1;36mINSTALANDO O APACHE2\033[0m"
 echo ""
-echo -e "\033[1;33mESPERE..."
+echo -e "\033[1;33mAGUARDE..."
 apt-get install apache2 -y > /dev/null 2>&1
+sed -i "s;Listen 80;Listen 81;g" /etc/apache2/ports.conf
+service apache2 restart > /dev/null 2>&1
 apt-get install cron curl unzip -y > /dev/null 2>&1
 echo ""
-echo -e "\033[1;36mINSTALANDO DEPENDENCIAS\033[0m"
+echo -e "\033[1;36mINSTALANDO DEPENDÊNCIAS\033[0m"
 echo ""
-echo -e "\033[1;33mESPERE..."
+echo -e "\033[1;33mAGUARDE..."
 apt-get install php5 libapache2-mod-php5 php5-mcrypt -y > /dev/null 2>&1
 service apache2 restart 
 echo ""
-echo -e "\033[1;36mINSTALANDO O MySQL\033[0m"
+echo -e "\033[1;36mINSTALANDO OU MySQL\033[0m"
 echo ""
 sleep 1
 apt-get install mysql-server -y 
 echo ""
 clear
-echo -e "                \033[1;31mATENCION"
+echo -e "                \033[1;31mATENÇÃO"
 echo ""
-echo -e "\033[1;32mINTRODUZCA LA MISMA CONTRASENA CADA QUE SE LE SOLICITE"
-echo -e "\033[1;32mSIEMPRE CONFIRME LAS PREGUNTAS CON \033[1;37m Y"
+echo -e "\033[1;32mREPITA SEMPRE A MESMA SENHA"
+echo -e "\033[1;32mSEMPRE CONFIRMA PERGUNTAS COM \033[1;37m Y"
 echo ""
-echo -ne "\033[1;33mEnter, Para Continuiar!\033[1;37m"; read
+echo -ne "\033[1;33mEnter, Para continuar!\033[1;37m"; read
 mysql_install_db
 mysql_secure_installation
 clear
-echo -e "\033[1;36mINSTALANDO PHPMYADMIN\033[0m"
+echo -e "\033[1;36mINSTALANDO O PHPMYADMIN\033[0m"
 echo ""
-echo -e "\033[1;31mATENCION \033[1;33m!!!"
+echo -e "\033[1;31mATENÇÃO \033[1;33m!!!"
 echo ""
-echo -e "\033[1;32mSELECIONE LA OPCION \033[1;31mAPACHE2 \033[1;32mCON A TECLA '\033[1;33mENTER\033[1;32m'"
+echo -e "\033[1;32mSELECIONE A OPÇÃO \033[1;31mAPACHE2 \033[1;32mCON NA TECLA '\033[1;33mE DE ENTER\033[1;32m'"
 echo ""
-echo -e "\033[1;32mSELECIONE \033[1;31mYES\033[1;32m EN LA SIGUIENTE OPCION (\033[1;36mdbconfig-common\033[1;32m)"
-echo -e "PARA CONFIGURAR LA BASE DE DATOS"
+echo -e "\033[1;32mSELECIONE \033[1;31mYES\033[1;32m NA PRÓXIMA OPÇÃO (\033[1;36mdbconfig-common\033[1;32m)"
+echo -e "PARA CONFIGURAR A BASE DE DADOS"
 echo ""
-echo -e "\033[1;32mSIEMPRE INTRODUZCA LA MISMA CONTRASENA"
+echo -e "\033[1;32mSEMPRE INSIRA A MESMA SENHA"
 echo ""
-echo -ne "\033[1;33mEnter, Para Continuar!\033[1;37m"; read
+echo -ne "\033[1;33mEnter, para continuar!\033[1;37m"; read
 apt-get install phpmyadmin -y
 php5enmod mcrypt
 service apache2 restart
@@ -66,19 +68,20 @@ apt-get install php5-curl > /dev/null 2>&1
 service apache2 restart
 clear
 echo ""
-echo -e "\033[1;31mATENĂ‡ION \033[1;33m!!!"
+echo -e "\033[1;31mATENÇÃO \033[1;33m!!!"
 echo ""
-echo -ne "\033[1;32mINFORME LA MISMA CONTRASENA\033[1;37m: "; read senha
+echo -ne "\033[1;32mENTRE COM A MESMA SENHA\033[1;37m: "; read senha
 echo -e "\033[1;32mOK\033[1;37m"
 sleep 1
-mysql -h localhost -u root -p$senha -e "CREATE DATABASE sshplus"
+mysql -h localhost -u root -p$senha -e "CRIAR BASE DE DADOS sshplus"
 clear
-echo -e "\033[1;36mFINALIZANDO INSTALACION\033[0m"
+echo -e "\033[1;36mFINALIZANDO A INSTALACAO\033[0m"
 echo ""
-echo -e "\033[1;33mESPERE..."
+echo -e "\033[1;33mAGUARDE..."
 echo ""
+mkdir /var/www/html
 cd /var/www/html
-wget https://www.dropbox.com/s/v7b6yiwg5jn4prh/PAINELWEB1.zip > /dev/null 2>&1
+wget https://github.com/karltec/ssh/blob/master/Install/Panel_Web/panel_v11/PAINELWEB1.zip > /dev/null 2>&1
 sleep 1
 unzip PAINELWEB1.zip > /dev/null 2>&1
 rm -rf PAINELWEB1.zip index.html > /dev/null 2>&1
@@ -89,14 +92,14 @@ sed -i "s;suasenha;$senha;g" /var/www/html/pages/system/pass.php > /dev/null 2>&
 fi
 sleep 1
 cd
-wget https://www.dropbox.com/s/lfxwu5wy7i46b80/sshplus.sql > /dev/null 2>&1
+wget https://raw.githubusercontent.com/karltec/ssh/master/Install/Panel_Web/panel_v11/sshplus.sql?token=ANNJ2UHVWZMUWBPNW2TNZAS7AFFHU > /dev/null 2>&1
 sleep 1
 if [[ -e "$HOME/sshplus.sql" ]]; then
     mysql -h localhost -u root -p$senha --default_character_set utf8 sshplus < sshplus.sql
     #rm /root/sshplus.sql
 else
     clear
-    echo -e "\033[1;31mERROR AL IMPORTAR BASE DE DATOS\033[0m"
+    echo -e "\033[1;31mFALHA NA IMPORTACAO DA BASE DE DADOS\033[0m"
     sleep 2
     exit
 fi
@@ -113,11 +116,11 @@ chmod 777 /var/www/html/admin/pages/faturas/comprovantes
 service apache2 restart
 sleep 1
 clear
-echo -e "\033[1;32mPAINEL INSTALADO CON EXITO!"
+echo -e "\033[1;32mPAINEL INSTALADO COM SUCESSO!"
 echo ""
-echo -e "\033[1;36mLINK AREA ADMIN:\033[1;37m $IP:81/html/admin\033[0m"
-echo -e "\033[1;36mLINK AREA REVENDA: \033[1;37m $IP:81/html\033[0m"
+echo -e "\033[1;36mLINK DA AREA DO ADMIN:\033[1;37m $IP:81/admin\033[0m"
+echo -e "\033[1;36mLINK DA AREA DO REVENDEDOR: \033[1;37m $IP:81\033[0m"
 echo -e "\033[1;36mUSUARIO\033[1;37m admin\033[0m"
-echo -e "\033[1;36mCONTRASENA\033[1;37m admin\033[0m"
-echo -e "\033[1;33mCambie la contrasena cuando logre entrar al panel\033[0m"
+echo -e "\033[1;36mSENHA\033[1;37m admin\033[0m"
+echo -e "\033[1;33mAltere a senha ao entrar no painel\033[0m"
 cat /dev/null > ~/.bash_history && history -c
