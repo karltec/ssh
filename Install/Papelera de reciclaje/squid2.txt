@@ -17,7 +17,7 @@ http_port 3128
 http_port 8799
 
 #Nome squid
-visible_hostname SSHPLUS
+visible_hostname ZEUS
  
 via off
 forwarded_for off
