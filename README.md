@@ -12,14 +12,14 @@ SCRIPT SSHPLUS MANAGER é um script com um conjunto de recursos e recomendaçõe
 
 -------------------------------------------------------------------------------
 
-**Manager Script**
+**Script de Gerenciamento**
 
 ##: heavy_exclamation_mark: Requerimientos
 * Um sistema operacional baseado em Linux (Ubuntu ou Debian)
 * Recomendamos o Ubuntu 14.04
 * Se recomenda usar uma distro nova ou formatada
 
-## Installation
+## Instalação
 
 apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Plus; chmod 777 Plus; ./Plus
 
