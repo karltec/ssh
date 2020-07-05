@@ -4,21 +4,20 @@
 
 
 ```
-SCRIPT SSHPLUS MANAGER es un script con un conjunto de características y herramientas adecuadas para 
-                 ofrecer extrema facilidad de manejo en servidores Linux con un enfoque en el uso de 
-                 VPN, tiene una interfaz agradable aportando información detallada sobre la máquina
-                 y los usuarios ...
+SCRIPT SSHPLUS MANAGER é um script com um conjunto de recursos e recomendações adicionais para
+                 ofereça extrema facilidade de manejo nos servidores Linux com um enfoque no uso de
+                 VPN, ele tem uma interface agradável, fornecendo informações detalhadas sobre a máquina
+                 e os usuarios ...
 ```
 
 -------------------------------------------------------------------------------
 
 **Manager Script**
 
-## :heavy_exclamation_mark: Requerimientos
-
-* Un sistema operativo basado en Linux (Ubuntu o Debian) 
-* Recomendamos Ubuntu 14.04
-* Se recomienda usar una distro nueva o formatiada
+##: heavy_exclamation_mark: Requerimientos
+* Um sistema operacional baseado em Linux (Ubuntu ou Debian)
+* Recomendamos o Ubuntu 14.04
+* Se recomenda usar uma distro nova ou formatada
 
 ## Installation
 
@@ -30,7 +29,7 @@ apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/AA
 
 ![logo](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/blob/master/Imagenes/TCP_Tweaker_TCP_SPEED.jpg)
 
-## Installation
+## Instalação
 
 wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Install/tcptweaker.sh; chmod +x tcptweaker.sh; ./tcptweaker.sh
 
@@ -39,35 +38,35 @@ wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FR
 
 ![logo](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/blob/master/Imagenes/Capturador_IP.jpg)
 
-## Installation
+## Instalação
 
 wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Install/IP; chmod +x IP; ./IP
 
 -------------------------------------------------------------------------------
-# Panel SSHPLUS (Web)
+# Pinel SSHPLUS (Web)
 
 ![logo](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/blob/master/Imagenes/Panel_SSHPLUS_Web.jpg)
 
 ```
-PANEL SSHPLUS v10 v11 v15 es para una gestión y
-                 Monitoreo completo de usuarios, permitiendo reventas y sub
-                 revendedores para aquellos que desean tener un negocio más amplio,
-                 También tiene una interfaz intuitiva, a la que se puede acceder en cualquier momento.
+O PAINEL SSHPLUS v10 v11 v15 é para uma administração e
+                 Monitoramento completo de usuários, permitindo reventas e sub
+                 revendedores para aquellos que desejam negociar mais amplos,
+                 Também existe uma interface intuitiva, que pode ser acessada no momento atual.
                  navegador ...
 ```
 
-## Installation
+## Instalação
 
 wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Install/Panel_Web/Panelweb.sh; chmod +x Panelweb.sh; ./Panelweb.sh
 
 -------------------------------------------------------------------------------
 
 ```
-* SIN MINERIA! 
-* SIN KEYS! 
-* VERSION GRATUITA 
-* SIN VIRUS TROJANO (BOTNET) 
-* ARCHIVOS LIBERADOS (DECENCRIPTADOS)
+* MANEIRA SIMPLES 
+* CHAVES KEYS! 
+* VERSÃO GRATUITA 
+* SEM VÍRUS TROJAN (BOT NET)
+* ARCHIVOS LIBERADOS (DE ENCRIPTADOS)
 ```
 
 ```
@@ -76,4 +75,4 @@ wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FR
 ☆ https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ ☆
 ```
 
-**By: [ FULL SCRIPTS ⃘⃤꙰✰ ]**
+**By: KARL TEC
