@@ -438,6 +438,7 @@ cat /dev/null > ~/.bash_history && history -c
 rm /root/inst > /dev/null 2>&1
 service apache2 restart
 }
+-
 panel_v20 () {
 echo "America/Sao_Paulo" > /etc/timezone
 ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
