@@ -1,8 +1,8 @@
 #!/bin/bash
 clear
 IP=$(wget -qO- ipv4.icanhazip.com)
-echo "America/Sao_Paulo" > /etc/timezone
-ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
+echo "America/Mexico_City" > /etc/timezone
+ln -fs /usr/share/zoneinfo/America/Mexico_City /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 clear
 echo -e "\E[44;1;37m           PANEL SSHPLUS WEB v10           \E[0m"
