@@ -3,7 +3,7 @@ clear
 IP=$(wget -qO- ipv4.icanhazip.com)
 echo "America/Mexico_City" > /etc/timezone
 ln -fs /usr/share/zoneinfo/America/Mexico_City /etc/localtime > /dev/null 2>&1
-dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
+#dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 clear
 echo -e "\E[44;1;37m           PAINEL SSHPLUS WEB v11          \E[0m"
 echo ""
